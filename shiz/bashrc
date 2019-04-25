@@ -1,0 +1,39 @@
+#export EDITOR=vim
+export EDITOR=vi
+set -o vi
+set editing-mode vi
+set keymap vi
+set convert-meta on
+
+## Command-mode bindings
+# Ctrl-A or Home: insert at line beginning like in emacs mode
+ bind -m vi-command 'Control-a: vi-insert-beg'
+# Ctrl-E or End: append at line end like in emacs mode
+ bind -m vi-command 'Control-e: vi-append-eol'
+
+## Insert-mode bindings
+# Ctrl-A: insert at line start like in emacs mode
+ bind -m vi-insert 'Control-a: beginning-of-line'
+# Ctrl-E: append at line end like in emacs mode
+ bind -m vi-insert 'Control-e: end-of-line'
+# Ctrl-L: clear screen
+ bind -m vi-insert 'Control-l: clear-screen'
+
+# retain <esc><backspace> functionality
+bind -m vi-insert '"\C-d": backward-kill-word'
+bind -m vi-command '"\C-h": "a"'
+bind -m vi-command '"\C-?": "a"'
+
+bind -m vi-command '"[5~": beginning-of-history'
+bind -m vi-command '"[1~": vi-insert-beg'
+bind -m vi-command '"[H": vi-insert-beg'
+bind -m vi-command '"[3~": delete-char'
+bind -m vi-command '"[6~": end-of-history'
+bind -m vi-command '"[4~": vi-append-eol'
+bind -m vi-command '"[8~": vi-append-eol'
+bind -m vi-command '"[F": vi-append-eol'
+bind -m vi-command '"[2~": quoted-insert'
+bind -m vi-command '"dd": "0Di"'
+
+#alias vi=vim
+
