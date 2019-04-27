@@ -1,4 +1,4 @@
-# alpine-base
+# alpine-base-glibc
 
-a base container based on alpine
+a base container based on alpine with glibc support
 
