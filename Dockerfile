@@ -3,7 +3,7 @@ MAINTAINER vladus2000 <docker@matt.land>
 
 ENV ENV=/.profile
 ENV STARTUP_CMD="sleep 1h"
-ENV GLIBC_VERSION 2.29-r0
+ENV GLIBC_VERSION 2.30-r0
 
 COPY shiz/ /
 
