@@ -1,5 +1,5 @@
 while true
 do
 	$STARTUP_CMD
-	sleep 1
+	sleep 1m
 done
